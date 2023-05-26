@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "282edee8-48d5-483a-b7b6-a262cc4d9321",
+		"name": "ANKASA API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25937527"
+	},
+	"item": [
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "SIGN UP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"fauzan@email.com\",\"password\":\"123\",\"name\":\"fauzan\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"fauzan@email.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/otp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OTP Aktivasi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"fauzan@email.com\",\"otp\":\"736769\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/otp/confirm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"otp",
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"fauzan@email.com\",\"password\":\"123\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profil",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU5YjY3YTAwLWQzM2YtNDkwNC1iZmEwLTgwYjQ1NWYwNmQwZiIsImVtYWlsIjoiZmF1emFuQGVtYWlsLmNvbSIsIm5hbWUiOiJmYXV6YW4iLCJwaG9uZSI6bnVsbCwiY2l0eSI6bnVsbCwiYWRkcmVzcyI6bnVsbCwicG9zdF9jb2RlIjpudWxsLCJwaG90byI6Imh0dHBzOi8vcmVzLmNsb3VkaW5hcnkuY29tL2RvZ3pybHRnOS9pbWFnZS91cGxvYWQvdjE2ODQ4NjEyNTYvcmVjaXBlcy9kcF9ncTB2eHgucG5nIiwib3RwIjoiNzM2NzY5IiwiaWF0IjoxNjg1MDc3MjQ4LCJleHAiOjE2ODYzOTEyNDh9.8BDG9nuLP_HbzchaefssxZFYF6ilFNVitPzKWdx5CTY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"fauzan@email.com\",\"name\":\"fauzan\",\"phone\":\"08123456789\",\"city\":\"Langsa\",\r\n\"address\":\"Langsa\",\"post_code\":\"123123\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TICKET",
+			"item": [
+				{
+					"name": "Get Ticket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/ticket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"ticket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ticket Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/ticket/detail/8841da8e-3a7e-4c68-bbb3-139ae0267e44",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"ticket",
+								"detail",
+								"8841da8e-3a7e-4c68-bbb3-139ae0267e44"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"plane_id\":\"2\",\"origin\":\"2\",\"destination\":\"3\",\"takeoff\":\"26-04-2023 13:00\", \"landing\":\"26-04-2023 23:30\",\"transit\":\"0\",\"price\":\"1000\",\"duration\":\"7 Hours 30 Minutes\"} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/ticket/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"ticket",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BOOKING",
+			"item": [
+				{
+					"name": "GET Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU5YjY3YTAwLWQzM2YtNDkwNC1iZmEwLTgwYjQ1NWYwNmQwZiIsImVtYWlsIjoiZmF1emFuQGVtYWlsLmNvbSIsIm5hbWUiOiJmYXV6YW4iLCJwaG9uZSI6bnVsbCwiY2l0eSI6bnVsbCwiYWRkcmVzcyI6bnVsbCwicG9zdF9jb2RlIjpudWxsLCJwaG90byI6Imh0dHBzOi8vcmVzLmNsb3VkaW5hcnkuY29tL2RvZ3pybHRnOS9pbWFnZS91cGxvYWQvdjE2ODQ4NjEyNTYvcmVjaXBlcy9kcF9ncTB2eHgucG5nIiwib3RwIjoiNzM2NzY5IiwiaWF0IjoxNjg1MDc3MjQ4LCJleHAiOjE2ODYzOTEyNDh9.8BDG9nuLP_HbzchaefssxZFYF6ilFNVitPzKWdx5CTY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/booking/myBooking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"booking",
+								"myBooking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Booking Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU5YjY3YTAwLWQzM2YtNDkwNC1iZmEwLTgwYjQ1NWYwNmQwZiIsImVtYWlsIjoiZmF1emFuQGVtYWlsLmNvbSIsIm5hbWUiOiJmYXV6YW4iLCJwaG9uZSI6bnVsbCwiY2l0eSI6bnVsbCwiYWRkcmVzcyI6bnVsbCwicG9zdF9jb2RlIjpudWxsLCJwaG90byI6Imh0dHBzOi8vcmVzLmNsb3VkaW5hcnkuY29tL2RvZ3pybHRnOS9pbWFnZS91cGxvYWQvdjE2ODQ4NjEyNTYvcmVjaXBlcy9kcF9ncTB2eHgucG5nIiwib3RwIjoiNzM2NzY5IiwiaWF0IjoxNjg1MDc3MjQ4LCJleHAiOjE2ODYzOTEyNDh9.8BDG9nuLP_HbzchaefssxZFYF6ilFNVitPzKWdx5CTY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/booking/detail/3b502919-a86a-4470-933a-03f735649b32",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"booking",
+								"detail",
+								"3b502919-a86a-4470-933a-03f735649b32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU5YjY3YTAwLWQzM2YtNDkwNC1iZmEwLTgwYjQ1NWYwNmQwZiIsImVtYWlsIjoiZmF1emFuQGVtYWlsLmNvbSIsIm5hbWUiOiJmYXV6YW4iLCJwaG9uZSI6bnVsbCwiY2l0eSI6bnVsbCwiYWRkcmVzcyI6bnVsbCwicG9zdF9jb2RlIjpudWxsLCJwaG90byI6Imh0dHBzOi8vcmVzLmNsb3VkaW5hcnkuY29tL2RvZ3pybHRnOS9pbWFnZS91cGxvYWQvdjE2ODQ4NjEyNTYvcmVjaXBlcy9kcF9ncTB2eHgucG5nIiwib3RwIjoiNzM2NzY5IiwiaWF0IjoxNjg1MDc3MjQ4LCJleHAiOjE2ODYzOTEyNDh9.8BDG9nuLP_HbzchaefssxZFYF6ilFNVitPzKWdx5CTY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ticket_id\":\"c51236eb-1152-46c4-bffa-503271eb3f54\",\"is_paid\":false,\"insurance\":1,\"insurance_price\":100.99,\"subtotal\":900,\"total\":1000.99,\"total_passenger\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/booking/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"booking",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Booking Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU5YjY3YTAwLWQzM2YtNDkwNC1iZmEwLTgwYjQ1NWYwNmQwZiIsImVtYWlsIjoiZmF1emFuQGVtYWlsLmNvbSIsIm5hbWUiOiJmYXV6YW4iLCJwaG9uZSI6bnVsbCwiY2l0eSI6bnVsbCwiYWRkcmVzcyI6bnVsbCwicG9zdF9jb2RlIjpudWxsLCJwaG90byI6Imh0dHBzOi8vcmVzLmNsb3VkaW5hcnkuY29tL2RvZ3pybHRnOS9pbWFnZS91cGxvYWQvdjE2ODQ4NjEyNTYvcmVjaXBlcy9kcF9ncTB2eHgucG5nIiwib3RwIjoiNzM2NzY5IiwiaWF0IjoxNjg1MDc3MjQ4LCJleHAiOjE2ODYzOTEyNDh9.8BDG9nuLP_HbzchaefssxZFYF6ilFNVitPzKWdx5CTY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":\"5b44374d-638c-408f-90d1-fe71155cea3c\",\"is_paid\":true}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/booking/paidUpdate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"booking",
+								"paidUpdate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
